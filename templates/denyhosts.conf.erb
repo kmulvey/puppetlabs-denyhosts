@@ -57,7 +57,7 @@ HOSTS_DENY = /etc/hosts.deny
 #            'y' = years
 #
 # never purge:
-PURGE_DENY = 
+PURGE_DENY = <%= purge_deny %> 
 #
 # purge entries older than 1 week
 #PURGE_DENY = 1w
@@ -249,7 +249,7 @@ SMTP_PORT = 25
 # SMTP_FROM: you can specify the "From:" address in messages sent
 # from DenyHosts when it reports thwarted abuse attempts
 #
-SMTP_FROM = DenyHosts <nobody@<%= fqdn %>>
+SMTP_FROM = DenyHosts <denyhosts@<%= fqdn %>>
 #
 #######################################################################
 
