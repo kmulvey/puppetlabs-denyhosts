@@ -57,7 +57,7 @@ HOSTS_DENY = /etc/hosts.deny
 #            'y' = years
 #
 # never purge:
-PURGE_DENY = <%= purge_deny %> 
+PURGE_DENY = <%= purge_deny || '' %> 
 #
 # purge entries older than 1 week
 #PURGE_DENY = 1w
