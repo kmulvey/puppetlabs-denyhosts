@@ -9,7 +9,7 @@
 # argument
 #
 # Redhat or Fedora Core:
-#SECURE_LOG = /var/log/secure
+SECURE_LOG = /var/log/secure
 #
 # Mandrake, FreeBSD or OpenBSD: 
 #SECURE_LOG = /var/log/auth.log
@@ -25,7 +25,7 @@
 #SECURE_LOG=/private/var/log/system.log
 #
 # Debian:
-SECURE_LOG = /var/log/auth.log
+#SECURE_LOG = /var/log/auth.log
 ########################################################################
 
 ########################################################################
@@ -107,7 +107,7 @@ BLOCK_SERVICE  = sshd
 # attempts has exceeded this value.  This value applies to invalid
 # user login attempts (eg. non-existent user accounts)
 #
-DENY_THRESHOLD_INVALID = 5
+DENY_THRESHOLD_INVALID = <%= deny_threshold_invalid %>
 #
 #######################################################################
 
@@ -118,7 +118,7 @@ DENY_THRESHOLD_INVALID = 5
 # user login attempts (eg. user accounts that exist in /etc/passwd) except
 # for the "root" user
 #
-DENY_THRESHOLD_VALID = 10
+DENY_THRESHOLD_VALID = <%= deny_threshold_valid %>
 #
 #######################################################################
 
@@ -128,7 +128,7 @@ DENY_THRESHOLD_VALID = 10
 # login attempts has exceeded this value.  This value applies to 
 # "root" user login attempts only.
 #
-DENY_THRESHOLD_ROOT = 1
+DENY_THRESHOLD_ROOT = <%= deny_threshold_root %>
 #
 #######################################################################
 
@@ -139,7 +139,7 @@ DENY_THRESHOLD_ROOT = 1
 # login attempts has exceeded this value.  This value applies to 
 # usernames that appear in the WORK_DIR/restricted-usernames file only.
 #
-DENY_THRESHOLD_RESTRICTED = 1
+DENY_THRESHOLD_RESTRICTED = <%= deny_threshold_restricted %>
 #
 #######################################################################
 
